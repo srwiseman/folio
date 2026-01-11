@@ -11,13 +11,15 @@
   "dependencies": {
     "next": "latest",
     "react": "latest",
-    "react-dom": "latest"
+  "react-dom": "latest",
+  "marked": "latest"
   },
   "devDependencies": {
     "autoprefixer": "latest",
     "postcss": "latest",
   "tailwindcss": "latest",
   "@tailwindcss/postcss": "latest",
+  "@tailwindcss/typography": "latest",
     "typescript": "latest",
     "@types/react": "latest",
     "@types/node": "latest",
