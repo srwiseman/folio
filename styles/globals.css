@@ -1,0 +1,61 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #__next {
+  height: 100%;
+}
+
+/* Enable smooth in-page scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F9FAFB; /* bg-gray-50 */
+  color: #111827; /* gray-900 */
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  margin: 0;
+  padding: 0; 
+}
+
+.cont {
+    width: 100%;    /* max-w-4xl */
+  padding-left: 0; /* px-4 */
+  padding-right: 0;
+  margin: 0;
+}
+
+.hero {
+background-color: #333;  /* dark grey */
+  height: 100vh;
+  display: flex;
+  align-items: center; /* vertical center */
+  justify-content: center; /* horizontal center */
+  text-align: center;
+}
+
+.hero-text {
+  font-size: clamp(1.8rem, 5vw, 4rem);
+  color: #fff;
+  margin: 0;
+}
+
+.triplix-text {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  color: #333;
+  margin: 0;
+}
+
+.hero-bg {
+    background-size: 100% 100%;
+background-position: 0px 0px;
+background-image: linear-gradient(90deg, #020202FF 0%, #103B5BFF 100%);
+}
+
+/* Fallback utility classes: ensure critical utilities render while dev build
+  may not emit every Tailwind utility (Turbopack/content scanning edge cases). */
+.text-white { color: #ffffff !important; }
+.drop-shadow-sm { filter: drop-shadow(0 1px 1px rgba(0,0,0,0.45)); }
+.font-semibold { font-weight: 600; }
