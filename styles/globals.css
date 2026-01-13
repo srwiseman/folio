@@ -49,9 +49,9 @@ background-color: #333;  /* dark grey */
 }
 
 .hero-bg {
-    background-size: 100% 100%;
-background-position: 0px 0px;
-background-image: linear-gradient(90deg, #020202FF 0%, #103B5BFF 100%);
+background-size: 100% 100%;
+background-position: 0px 0px,0px 0px,0px 0px,0px 0px,0px 0px;
+background-image: radial-gradient(49% 81% at 45% 47%, #00000045 0%, #073AFF00 100%),radial-gradient(113% 91% at 17% -2%, #000000FF 1%, #FF000000 99%),radial-gradient(142% 91% at 83% 7%, #020202FF 1%, #FF000000 99%),radial-gradient(142% 91% at -6% 74%, #0E3B85FF 1%, #FF000000 99%),radial-gradient(142% 91% at 111% 84%, #000000FF 98%, #000000FF 100%);
 }
 
 /* Fallback utility classes: ensure critical utilities render while dev build
