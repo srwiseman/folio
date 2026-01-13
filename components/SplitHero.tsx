@@ -1,10 +1,12 @@
 type SplitHeroProps = {
   title: string;
   subheadline?: string;
+  // Optional content to render under the subheadline on the left column
+  leftSlot?: React.ReactNode;
   children: React.ReactNode;
 };
 
-export default function SplitHero({ children, title }: SplitHeroProps) {
+export default function SplitHero({ children, title, subheadline, leftSlot }: SplitHeroProps) {
   return (
     <section className="w-full h-screen bg-[#333] hero-bg">
       <div className="h-full flex flex-row md:flex-row">
@@ -15,12 +17,12 @@ export default function SplitHero({ children, title }: SplitHeroProps) {
               {title}
             </h1>
             {/* Subheadline (optional) */}
-            {/** @ts-ignore -- subheadline may be undefined; render conditionally */}
-            {typeof (arguments[0] as any)?.subheadline !== 'undefined' && (
-              <p className="mt-4 text-lg text-indigo-200 text-center max-w-md mx-auto">
-                {(arguments[0] as any).subheadline}
-              </p>
+            {subheadline && (
+              <p className="mt-4 text-lg text-indigo-200 text-center max-w-md mx-auto">{subheadline}</p>
             )}
+
+            {/* Optional left slot under subheadline */}
+            {leftSlot && <div className="mt-6 flex items-center justify-center">{leftSlot}</div>}
           </div>
         </div>
 
