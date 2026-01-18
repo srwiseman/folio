@@ -3,6 +3,7 @@ import SplitHero from '../components/SplitHero'
 import screenshot from '../assets/screenshot1.png'
 import screenshot2 from '../assets/screenshot2.png'
 import iosBadge from '../assets/ios_badge_black.svg'
+import googlePlay from '../assets/google_play_badge.png'
 import Header from '../components/Header'
 
 export default function Triplix() {
@@ -12,7 +13,16 @@ export default function Triplix() {
             <SplitHero
                 title="Triplix"
                 subheadline="A Number Puzzle Game"
-                leftSlot={<a href="https://apps.apple.com/ca/app/triplix-merge/id6757375193" target="_blank" rel="noopener noreferrer"><img src={iosBadge.src} alt="Download on the App Store" className="h-12 md:h-16" /></a>}
+                                leftSlot={
+                                    <div className="flex flex-col items-center space-y-3">
+                                        <a href="https://apps.apple.com/ca/app/triplix-merge/id6757375193" target="_blank" rel="noopener noreferrer">
+                                            <img src={iosBadge.src} alt="Download on the App Store" className="h-12 md:h-16" />
+                                        </a>
+                                            <a href="https://play.google.com/store/apps/details?id=com.swiseman.triplix&hl=en" target="_blank" rel="noopener noreferrer">
+                                                <img src={googlePlay.src} alt="Get it on Google Play" className="h-12 md:h-16" />
+                                            </a>
+                                    </div>
+                                }
             >
                 <div className='triplix-text'>
                     <div className="mt-4 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8">
